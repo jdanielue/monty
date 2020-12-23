@@ -12,7 +12,7 @@ void fun_pall(stack_t **stack, unsigned int line_c)
 	stack_t *temp;
 
 	temp = *stack;
-
+	(void) line_c;
 	while (temp != NULL)
 	{
 		printf("%i\n", temp->n);

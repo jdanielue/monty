@@ -14,8 +14,8 @@ void fun_add(stack_t **stack, unsigned int line_c)
 	int result;
 
 	result = temp->n + temp->next->n;
-	pop(stack, line_c);
-	pop(stack, line_c);
+	fun_pop(stack, line_c);
+	fun_pop(stack, line_c);
 
 	temp->n = result;
 	temp->prev = NULL;

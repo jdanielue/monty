@@ -1,4 +1,5 @@
 #include "monty.h"
+
 /**
  * main - monty interpreter
  * @argc: unnused attribute
@@ -8,21 +9,22 @@
  */
 
 
-main(int __attribute__((unused)) argc, char *argv[])
+int main(int __attribute__((unused)) argc, char *argv[])
 {
 	FILE *fp;
 	stack_t *stack = NULL;
 	char line[50];
 	int comp, comp2;
+	const char *delim;
+	unsigned int line_c = 1;
+	int i = 0, flag = 0, length;
 	char *str = (char *)malloc(sizeof(char));
 	char *temp = (char *)malloc(sizeof(char));
 	char *temp2 = (char *)malloc(sizeof(char));
 
 	command = (char **)malloc(32 * sizeof(char *));
-	const char delim[2] = " ";
-	unsigned int line_c = 1;
-	int i = 0, j = 0, flag = 0, length;
 
+	delim = " ";
 	fp = fopen(argv[1], "r");
 
 	while (fgets(line, 255, fp))
@@ -50,4 +52,5 @@ main(int __attribute__((unused)) argc, char *argv[])
 	}
 	i = 0;
 	fclose(fp);
+	return (0);
 }

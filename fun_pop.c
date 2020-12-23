@@ -12,7 +12,7 @@ void fun_pop(stack_t **stack, unsigned int line_c)
 	stack_t *temp;
 
 	temp = *stack;
-
+	(void) line_c;
 	if (temp->next != NULL)
 	{
 		*stack = temp->next;
