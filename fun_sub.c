@@ -1,6 +1,6 @@
 #include "monty.h"
 /**
- * fun_sub - function that substracts the top element
+ * fun_sub - function that substracts the top element1
  * from the second top element
  * @stack: Pointer to top of stack
  * @line_c: Line count
