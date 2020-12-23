@@ -1,6 +1,6 @@
 #include "monty.h"
 /**
- * fun_nop - function that does nothing
+ * fun_nop - function that does nothing1
  * @stack: Pointer to top of stack
  * @line_c: Line count
  *
