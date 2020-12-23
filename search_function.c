@@ -19,6 +19,8 @@ void search_function(unsigned int line_c, stack_t **stack)
 		{"nop", fun_nop},
 		{"pop", fun_pop},
 		{"sub", fun_sub},
+		{"div", fun_div},
+		{"mul", fun_mul},
 		{NULL, NULL}
 	};
 	int i = 0, comp;
