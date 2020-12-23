@@ -47,5 +47,8 @@ void fun_nop(stack_t **stack, unsigned int line_c);
 void fun_add(stack_t **stack, unsigned int line_c);
 void fun_pall(stack_t **stack, unsigned int line_c);
 void fun_pop(stack_t **stack, unsigned int line_c);
+void fun_div(stack_t **stack, unsigned int line_c);
+void fun_mul(stack_t **stack, unsigned int line_c);
+
 
 #endif
