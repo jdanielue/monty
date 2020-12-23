@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * fun_pop - function that remove the value on the front.
+ * fun_pop - function that remove the value on the front1.
  * @stack: pointer  to the top
  * @line_c: Actual line of the file
  * Return: Always void.
