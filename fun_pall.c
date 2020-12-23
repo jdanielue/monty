@@ -12,7 +12,7 @@ void fun_pall(stack_t **stack, unsigned int line_c)
 	stack_t *temp;
 
 	temp = *stack;
-	if (*(stack) == NULL)
+	if (*stack == NULL)
 	{
 		fprintf(stderr, "L%d: can't pint, stack empty\n", line_c);
 		exit(EXIT_FAILURE);
