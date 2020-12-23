@@ -9,6 +9,6 @@
 
 void fun_nop(stack_t **stack, unsigned int line_c)
 {
-	line_c = line_c;
-	*stack = *stack;
+	(void)line_c;
+	(void)*stack;
 }
