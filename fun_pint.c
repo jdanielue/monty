@@ -10,5 +10,5 @@
 void fun_pint(stack_t **stack, unsigned int line_c)
 {
 	(void) line_c;
-	printf("value at the top of the stack is : %d\n", (*stack)->n);
+	printf("%d\n", (*stack)->n);
 }
