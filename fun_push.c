@@ -9,19 +9,29 @@
 
 void fun_push(stack_t **stack, unsigned int line_c)
 {
-	int number;
+	int number, i = 0;
 	stack_t *temp;
 
 	temp = malloc(sizeof(stack_t));
 	(void) line_c;
-	if (command[1] != NULL)
+
+	if (command[1] == NULL)
 	{
-		number = atoi(command[1]);
+		fprintf(stderr, "L%d: usage: push integer\n", line_c);
+		exit(EXIT_FAILURE);
 	}
-	else
+	if (command[1][0] == '-')
+		i++;
+	for (; command[1][i]; i++)
 	{
-		exit(1);
+		if (command[1][i] < '0' || command[1][i] > '9')
+		{
+		fprintf(stderr, "L%d: usage: push integer\n", line_c);
+		exit(EXIT_FAILURE);
+		}
 	}
+	number = atoi(command[1]);
+
 	temp->n = number;
 	temp->prev = NULL;
 	if (*stack == NULL)
