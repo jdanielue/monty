@@ -2,7 +2,7 @@
 
 /**
  * fun_pall - function prints all the values on the stack.
- * @stack: pointer  to the top
+ * @stack: pointer  to the top1
  * @line_c: Actual line of the file
  * Return: Always void.
  */
