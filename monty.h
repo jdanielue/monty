@@ -1,5 +1,9 @@
-#ifndef MONTY_H
-#define MONTY_H
+#ifndef _MONTY_H
+#define _MONTY_H
+
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -12,11 +16,10 @@
  */
 typedef struct stack_s
 {
-        int n;
-        struct stack_s *prev;
-        struct stack_s *next;
+	int n;
+	struct stack_s *prev;
+	struct stack_s *next;
 } stack_t;
-
 
 /**
  * struct instruction_s - opcode and its function
@@ -28,10 +31,20 @@ typedef struct stack_s
  */
 typedef struct instruction_s
 {
-        char *opcode;
-        void (*f)(stack_t **stack, unsigned int line_number);
+	char *opcode;
+	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-
+extern char **command;
+void search_function(unsigned int line_c, stack_t **stack);
+void fun_nop(stack_t **stack, unsigned int line_c);
+void fun_swap(stack_t **stack, unsigned int line_c);
+void fun_sub(stack_t **stack, unsigned int line_c);
+void fun_push(stack_t **stack, unsigned int line_c);
+void fun_pint(stack_t **stack, unsigned int line_c);
+void fun_nop(stack_t **stack, unsigned int line_c);
+void fun_add(stack_t **stack, unsigned int line_c);
+void fun_pall(stack_t **stack, unsigned int line_c);
+void fun_pop(stack_t **stack, unsigned int line_c);
 
 #endif
