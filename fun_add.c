@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * fun_add - function that add the value 2 values on the front
+ * fun_add - function that add the value 2 values on the front1
  * @stack: pointer  to the top
  * @line_c: Actual line of the file
  * Return: Always void.
