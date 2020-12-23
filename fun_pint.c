@@ -1,7 +1,7 @@
 #include "monty.h"
 /**
  * fun_pint - doubly linked list representation of a stack (or queue)
- * @stack: Pointer to top of stack
+ * @stack: Pointer to top of stack1
  * @line_c: Line count
  *
  * Description: creates nodes at the top of the stack
