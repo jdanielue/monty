@@ -13,7 +13,7 @@ void fun_swap(stack_t **stack, unsigned int line_c)
 
 	if (*(stack) == NULL)
 	{
-		fprintf(stderr, "L%d: can't pint, stack empty\n", line_c);
+		fprintf(stderr, "L%d: can't swap, stack too short\n", line_c);
 		exit(EXIT_FAILURE);
 	}
 

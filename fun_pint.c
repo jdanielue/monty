@@ -10,7 +10,7 @@
 void fun_pint(stack_t **stack, unsigned int line_c)
 {
 
-	if (*(stack) == NULL)
+	if (*stack == NULL)
 	{
 		fprintf(stderr, "L%d: can't pint, stack empty\n", line_c);
 		exit(EXIT_FAILURE);

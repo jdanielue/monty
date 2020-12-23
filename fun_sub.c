@@ -18,7 +18,7 @@ void fun_sub(stack_t **stack, unsigned int line_c)
 
 	if (*(stack) == NULL)
 	{
-		fprintf(stderr, "L%d: can't pint, stack empty\n", line_c);
+		fprintf(stderr, "L%d: can't sub, stack too short\n", line_c);
 		exit(EXIT_FAILURE);
 	}
 

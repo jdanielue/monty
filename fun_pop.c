@@ -13,9 +13,9 @@ void fun_pop(stack_t **stack, unsigned int line_c)
 
 	temp = *stack;
 
-	if (*(stack) == NULL)
+	if (*stack == NULL)
 	{
-		fprintf(stderr, "L%d: can't pint, stack empty\n", line_c);
+		fprintf(stderr, "L%d: can't pop an empty stack\n", line_c);
 		exit(EXIT_FAILURE);
 	}
 	if (temp->next != NULL)
