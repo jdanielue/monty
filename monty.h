@@ -35,7 +35,8 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-extern char **command;
+char **command;
+
 void search_function(unsigned int line_c, stack_t **stack);
 void fun_nop(stack_t **stack, unsigned int line_c);
 void fun_swap(stack_t **stack, unsigned int line_c);
