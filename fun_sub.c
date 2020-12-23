@@ -12,18 +12,21 @@
 void fun_sub(stack_t **stack, unsigned int line_c)
 {
 	stack_t *temp1, *temp2;
-	int sub;
+	int sub, counter = 0;
 
-	(void) line_c;
-
-	if (*(stack) == NULL)
+	temp1 = malloc(sizeof(stack_t));
+	temp2 = malloc(sizeof(stack_t));
+	temp1 = *stack;
+	while (temp1 != NULL)
+	{
+		temp1 = temp1->next;
+		counter++;
+	}
+	if (counter < 2)
 	{
 		fprintf(stderr, "L%d: can't sub, stack too short\n", line_c);
 		exit(EXIT_FAILURE);
 	}
-
-	temp1 = malloc(sizeof(stack_t));
-	temp2 = malloc(sizeof(stack_t));
 	temp1 = *stack;
 	temp2 = (*stack)->next;
 	sub = temp2->n - temp1->n;
