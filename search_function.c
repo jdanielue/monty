@@ -27,7 +27,18 @@ void search_function(unsigned int line_c, stack_t **stack)
 	{
 		comp = strcmp(funcion[i].opcode, command[0]);
 		if (comp == 0)
+		{
 			funcion[i].f(stack, line_c);
+			break;
+		}
+
 		i++;
 	}
+
+	if (i == 8)
+	{
+		fprintf(stderr, "L%d: unknown instruction %s\n", line_c, command[0]);
+		exit(EXIT_FAILURE);
+	}
+
 }
