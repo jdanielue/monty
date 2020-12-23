@@ -11,11 +11,11 @@ void fun_pall(stack_t **stack, unsigned int line_c)
 {
 	stack_t *temp;
 
+	(void) line_c;
 	temp = *stack;
 	if (*stack == NULL)
 	{
-		fprintf(stderr, "L%d: can't pint, stack empty\n", line_c);
-		exit(EXIT_FAILURE);
+		return;
 	}
 	while (temp != NULL)
 	{
