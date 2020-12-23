@@ -13,14 +13,17 @@ void fun_push(stack_t **stack, unsigned int line_c)
 	stack_t *temp;
 
 	temp = malloc(sizeof(stack_t));
-	(void) line_c;
-	if (command[1] != NULL)
+	if (temp == NULL)
+		return;
+
+	if (command[1][0] >= 48 && command[1][0] <= 57)
 	{
 		number = atoi(command[1]);
 	}
 	else
 	{
-		exit(1);
+		fprintf(stderr, "L%d: usage: push integer\n", line_c);
+		exit(EXIT_FAILURE);
 	}
 	temp->n = number;
 	temp->prev = NULL;
