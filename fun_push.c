@@ -1,6 +1,6 @@
 #include "monty.h"
 /**
- * fun_push - creates nodes at the top of the stack 
+ * fun_push - creates nodes at the top of the stack
  * @stack: Pointer to top of stack
  * @line_c: Line count
  *

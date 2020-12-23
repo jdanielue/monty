@@ -12,7 +12,12 @@ void fun_pop(stack_t **stack, unsigned int line_c)
 	stack_t *temp;
 
 	temp = *stack;
-	(void) line_c;
+
+	if (*(stack) == NULL)
+	{
+		fprintf(stderr, "L%d: can't pint, stack empty\n", line_c);
+		exit(EXIT_FAILURE);
+	}
 	if (temp->next != NULL)
 	{
 		*stack = temp->next;

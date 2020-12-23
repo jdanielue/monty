@@ -10,9 +10,24 @@
 
 void fun_add(stack_t **stack, unsigned int line_c)
 {
-	stack_t *temp = *stack;
-	int result;
+	stack_t *temp;
+	int result, counter = 0;
 
+	temp = *stack;
+
+	while (temp != NULL)
+	{
+		temp = temp->next;
+		counter++;
+	}
+
+	if (counter < 2)
+	{
+		fprintf(stderr, "L%d: can't pint, stack empty\n", line_c);
+		exit(EXIT_FAILURE);
+	}
+
+	temp = *stack;
 	result = temp->n + temp->next->n;
 	fun_pop(stack, line_c);
 	fun_pop(stack, line_c);
