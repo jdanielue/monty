@@ -1,6 +1,6 @@
 #include "monty.h"
 /**
- * fun_swap - swaps the two top nodes of the stack
+ * fun_swap - swaps the two top nodes of the stack1
  * @stack: Pointer to top of stack
  * @line_c: Line count
  *
