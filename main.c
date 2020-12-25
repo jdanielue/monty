@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 	const char *delim = " ";
 	unsigned int line_c = 1;
 	int i = 0, flag = 0;
-	char *str, *temp = (char *)malloc(sizeof(char));
+	char *str;
 
 	command = (char **)malloc(32 * sizeof(char *));
 	if (argc != 2)
@@ -39,10 +39,10 @@ int main(int argc, char *argv[])
 		str = strtok(line, delim);
 		while (str != NULL && !(comp == 0) && i <= 1)
 		{
-			temp = str;
-			comp2 = strcmp(&temp[strlen(temp) - 1], "\n");
+
+			comp2 = strcmp(&str[strlen(str) - 1], "\n");
 			if (comp2 == 0)
-				str[strlen(temp) - 1] = '\0';
+				str[strlen(str) - 1] = '\0';
 			command[i] = str, i++, flag = 1;
 			str = strtok(NULL, delim);
 		}
@@ -51,5 +51,7 @@ int main(int argc, char *argv[])
 		flag = 0, i = 0, line_c++;
 	}
 	fclose(fp);
+	node_free(stack);
+	free(command);
 	return (0);
 }

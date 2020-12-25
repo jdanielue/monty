@@ -50,5 +50,8 @@ void fun_pop(stack_t **stack, unsigned int line_c);
 void fun_div(stack_t **stack, unsigned int line_c);
 void fun_mul(stack_t **stack, unsigned int line_c);
 
+void special_free(char **cartman);
+void node_free(stack_t *top);
+
 
 #endif
