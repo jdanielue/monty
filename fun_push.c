@@ -15,7 +15,7 @@ void fun_push(stack_t **stack, unsigned int line_c)
 	temp = malloc(sizeof(stack_t));
 	(void) line_c;
 
-	if (command[1] == NULL)
+	if (command[1] == NULL || command[1][0] == '\0')
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", line_c);
 		exit(EXIT_FAILURE);

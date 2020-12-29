@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 	}
 	while (fgets(line, 255, fp))
 	{
-		comp = strcmp(line, "\n");
+		comp = fun_empty_spaces(line);
 		str = strtok(line, delim);
 		while (str != NULL && !(comp == 0) && i <= 1)
 		{
@@ -46,6 +46,7 @@ int main(int argc, char *argv[])
 		if (flag == 1)
 			search_function(line_c, &stack);
 		flag = 0, i = 0, line_c++;
+		command[1] = NULL;
 	}
 	fclose(fp);
 	node_free(stack);

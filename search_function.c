@@ -37,7 +37,7 @@ void search_function(unsigned int line_c, stack_t **stack)
 		i++;
 	}
 
-	if (i == 8)
+	if (funcion[i].opcode == NULL)
 	{
 		fprintf(stderr, "L%d: unknown instruction %s\n", line_c, command[0]);
 		exit(EXIT_FAILURE);
