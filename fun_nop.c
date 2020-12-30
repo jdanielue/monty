@@ -9,9 +9,10 @@
 
 void fun_nop(stack_t **stack, unsigned int line_c)
 {
-	if (line_c == 1)
+	if (line_c != 0)
 	{
-		exit(0);
+		free(command);
+		return;
 	}
 
 	if (*(stack) == NULL)

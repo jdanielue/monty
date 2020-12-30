@@ -14,8 +14,6 @@ void fun_sub(stack_t **stack, unsigned int line_c)
 	stack_t *temp1, *temp2;
 	int sub, counter = 0;
 
-	temp1 = malloc(sizeof(stack_t));
-	temp2 = malloc(sizeof(stack_t));
 	temp1 = *stack;
 	while (temp1 != NULL)
 	{
