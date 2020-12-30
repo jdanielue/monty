@@ -11,7 +11,6 @@ void fun_nop(stack_t **stack, unsigned int line_c)
 {
 	if (line_c == 1)
 	{
-		asm("nop");
 		exit(0);
 	}
 
