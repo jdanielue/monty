@@ -9,13 +9,7 @@
 
 void fun_nop(stack_t **stack, unsigned int line_c)
 {
-	if (line_c != 0)
-	{
-		free(command);
-		return;
-	}
-
-	if (*(stack) == NULL)
+	if (line_c == 0 && *(stack) == NULL)
 	{
 		fprintf(stderr, "L%d: can't pint, stack empty\n", line_c);
 		exit(EXIT_FAILURE);
